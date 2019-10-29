@@ -15,12 +15,12 @@ impl Cipher {
     let n: HashMap<char, char> = map2.chars().zip(map1.chars()).collect();
     Cipher { cipher_encode_map: m, cipher_decode_map: n }
   }
-  
+
   fn encode(&self, string: &str) -> String {
     string.chars().map(
         |ch| self.cipher_encode_map.get(&ch).unwrap_or(&ch).to_owned()).collect()
   }
-  
+
   fn decode(&self, string: &str) -> String {
     string.chars().map(
         |ch| self.cipher_decode_map.get(&ch).unwrap_or(&ch).to_owned()).collect()
