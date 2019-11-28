@@ -130,3 +130,37 @@ fn bad_sudoku2() {
     assert!(!bad_sudoku_2.is_valid());
 }
 
+#[test]
+fn bad_sudoku3() {
+
+    let bad_sudoku_2 = Sudoku {
+        data: vec![
+            vec![1, 2, 3, 4, 5],
+        ],
+    };
+    assert!(!bad_sudoku_2.is_valid());
+}
+
+#[test]
+fn good_sudoku4() {
+
+    let good_sudoku= Sudoku {
+        data: vec![
+            vec![1],
+        ],
+    };
+    assert!(good_sudoku.is_valid());
+}
+
+#[test]
+fn bad_sudoku5() {
+
+    let bad_sudoku_2 = Sudoku {
+        data: vec![
+            vec![1, 2, 3, 4],
+            vec![1, 2, 3, 4],
+        ],
+    };
+    assert!(!bad_sudoku_2.is_valid());
+}
+
